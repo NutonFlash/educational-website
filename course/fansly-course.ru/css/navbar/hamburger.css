@@ -1,0 +1,133 @@
+#hamburger {
+    width: 15%;
+    cursor: pointer;
+    margin-right: 3%;
+}
+
+#hamburger button {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: none;
+}
+
+#hamburger button:hover,
+#hamburger button:focus,
+#hamburger button:active {
+    outline: none;
+}
+
+button div.row {
+    position: relative;
+    z-index: 1;
+    height: .2rem;
+    width: 2.5rem;
+    background-color: white;
+    margin: 0 auto;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+}
+
+#hamburger .hamb-top {
+    transform: translateY(-.4rem);
+}
+#hamburger .hamb-top.transform {
+    transform: translateY(-.7rem);
+}
+
+#hamburger .hamb-middle {
+    transform: translateY(0);
+}
+
+#hamburger .hamb-bottom {
+    transform: translateY(.4rem);
+}
+#hamburger .hamb-bottom.transform {
+    transform: translateY(.7rem);
+}
+
+/* Mobile phones */
+
+@media (orientation: portrait) and (min-width: 360px) {
+    button div.row {
+        height: .3rem;
+        width: 2.5rem;
+    }
+    #hamburger .hamb-top {
+        transform: translateY(-.45rem);
+    }
+    #hamburger .hamb-bottom {
+        transform: translateY(.45rem);
+    }
+}
+
+/* Laptops & tablets*/
+
+@media (orientation: portrait) and (min-width: 768px) {
+    #hamburger {
+        width: 20%;
+    }
+    button div.row {
+        width: 3.5rem;
+    }
+    #hamburger .hamb-top {
+        transform: translateY(-.6rem);
+    }
+    #hamburger .hamb-bottom {
+        transform: translateY(.6rem);
+    }
+}
+
+@media (orientation: portrait) and (min-width: 1024px) {
+    #hamburger {
+        width: 25%;
+    }
+}
+
+/* Desktops */
+
+@media (orientation: landscape)  and (min-width: 1024px) and (min-height: 576px) {
+    #hamburger {
+        width: 45%;
+    }
+}
+
+@media (orientation: landscape)  and (min-width: 1440px) and (min-height: 986px) {
+    #hamburger .hamb-top {
+        transform: translateY(-.5rem);
+    }
+    #hamburger .hamb-top.transform {
+        transform: translateY(-.85rem);
+    }
+
+    #hamburger .hamb-bottom {
+        transform: translateY(.5rem);
+    }
+    #hamburger .hamb-bottom.transform {
+        transform: translateY(.85rem);
+    }
+}
+
+@media (orientation: landscape)  and (min-width: 2560px) {
+    button div.row {
+        width: 5rem;
+        height: .4rem;
+    }
+    #hamburger .hamb-top {
+        transform: translateY(-.9rem);
+    }
+    #hamburger .hamb-top.transform {
+        transform: translateY(-1.3rem);
+    }
+
+    #hamburger .hamb-bottom {
+        transform: translateY(.9rem);
+    }
+    #hamburger .hamb-bottom.transform {
+        transform: translateY(1.3rem);
+    }
+}

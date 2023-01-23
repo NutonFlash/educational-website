@@ -1,0 +1,52 @@
+.footer {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2% 3% 0 3%;
+}
+
+.footer p {
+    width: 100%;
+}
+
+#support {
+    margin-bottom: .75rem;
+    font-size: 1rem;
+}
+
+#author {
+    margin-bottom: 1.15rem;
+    font-size: .8rem;
+}
+
+.footer a {
+    font-size: 1rem;
+    color: #0d6efd;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer a:active {
+    color: #9e2fa8;
+}
+
+/* Desktops */
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    #support {
+        font-size: .8rem;
+    }
+    .footer a {
+        font-size: .8rem;
+    }
+    #author {
+        font-size: .6rem;
+    }
+}

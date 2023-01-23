@@ -1,0 +1,74 @@
+ol.phrases-list li {
+    padding-left: 3%;
+}
+
+ol.phrases-list li::marker {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+.phrase {
+    margin: 7.5% 0;
+    border: thin rgba(43, 43, 43, 1) solid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.phrase.full-page p {
+    padding: 1.5% 2.5%;
+}
+
+.phrase :first-child {
+    background-color: rgba(251, 255, 8, 0.75);
+    font-weight: 600;
+}
+
+.phrase p {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: left;
+    padding: 3% 5%;
+    margin-bottom: 0;
+}
+
+/* Mobile phones */
+
+@media (orientation: portrait) and (min-width: 0), (orientation: landscape) and (min-width: 0) {
+    .phrases-list {
+        padding-left: 6%;
+        margin-bottom: 0;
+    }
+    #last-list-item div {
+        margin-bottom: 0;
+    }
+    .row {
+        margin: 0 3% 0 0 !important;
+    }
+    .phrase.full-page {
+        margin: 7.5% 5% 7.5% 0;
+    }
+    ol.phrases-list li::marker {
+        font-size: .95rem;
+    }
+    .phrase p {
+        font-size: .95rem;
+    }
+}
+
+/* Desktops */
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .phrases-list {
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+    }
+    .phrase.full-page {
+        margin: 3.5% 0;
+    }
+    .phrases-list li::marker {
+        font-size: .85rem;
+    }
+    .phrase p {
+        font-size: .85rem;
+    }
+}

@@ -1,0 +1,80 @@
+#ath-btn-container {
+    width: 50%;
+}
+
+#auth-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    margin-left: 3%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 100%;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    background: rgba(10, 143, 196, 0);
+    border: 1px solid white;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+#auth-btn:hover {
+    color: #4a92ff;
+    background-color: white;
+    border: none;
+}
+
+#auth-btn p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Mobile phones */
+
+@media (orientation: landscape)  and (min-width: 0) {
+    #ath-btn-container {
+        width: 30%
+    }
+}
+
+@media (orientation: portrait)  and (min-width: 376px) {
+    #auth-btn {
+        height: 70%;
+    }
+}
+
+/* Laptops & tablets*/
+
+@media (orientation: portrait) and (min-width: 768px) {
+    #auth-btn p {
+        font-size: 1.35rem;
+    }
+}
+
+/* Desktops */
+
+@media (orientation: landscape)  and (min-width: 1024px) and (min-height: 576px) {
+    #ath-btn-container {
+        width: 100%;
+    }
+}
+
+@media (orientation: landscape)  and (min-width: 1440px) and (min-height: 986px) {
+    #auth-btn {
+        height: 80%;
+    }
+}
+
+@media (orientation: landscape)  and (min-width: 2560px) {
+    #auth-btn {
+        border-radius: 45px;
+        border-width: 3px;
+    }
+    #auth-btn p {
+        font-size: 1.85rem;
+    }
+}

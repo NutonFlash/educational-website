@@ -1,0 +1,120 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: black;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.benefits, .operator, .for-who, .conditions, .salary, .program, .reviews {
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+}
+
+.line {
+    margin: 3% auto;
+    width: 35%;
+    border-bottom: 3px solid black;
+    border-radius: 45px;
+}
+
+.operator > p, .for-who > p, .salary > p {
+    padding: 5px 10px 0;
+}
+
+.contact {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.contact p {
+    font-size: 1.25rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin: 0;
+}
+
+.contact a {
+    font-size: 1.25rem;
+    color: #0d6efd;
+}
+
+@media (min-width: 384px) {
+    .line {
+        width: 25%;
+    }
+
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+
+    .line {
+        width: 13%;
+    }
+
+    .operator > p, .for-who > p, .salary > p {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .operator > p, .for-who > p, .salary > p {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1400px) {
+    html {
+        font-size: 24px;
+    }
+
+    .operator > p, .for-who > p, .salary > p {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}

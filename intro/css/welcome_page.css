@@ -1,0 +1,58 @@
+.welcome-page {
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.header1 {
+    height: 40%;
+}
+
+.header2 {
+    height: 20%;
+}
+
+.header1, .header2, .button-container, .onlyfans {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header1 h1, .header2 h2 {
+    color: whitesmoke;
+}
+
+.header2 h2 {
+    font-weight: normal;
+}
+
+.button-container {
+    height: 30%;
+}
+
+.onlyfans {
+    height: 10%;
+    color: whitesmoke;
+    margin-bottom: 10%;
+}
+
+.onlyfans p {
+    padding-bottom: 10px;
+}
+
+@media (orientation: portrait) {
+    .welcome-page {
+        background-image: linear-gradient(to bottom, rgba(26, 40, 120, 0.6), rgba(10, 143, 196, 0.6)), url(../sources/welcome_page/bg-offer-vertical.jpg);
+    }
+}
+
+@media (orientation: landscape) {
+    .welcome-page {
+        background-image: linear-gradient(to bottom, rgba(26, 40, 120, 0.6), rgba(10, 143, 196, 0.6)), url(../sources/welcome_page/bg-offer-horizontal.jpg);
+    }
+}

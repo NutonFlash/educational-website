@@ -1,0 +1,81 @@
+.program > div {
+    margin-top: 2rem;
+    position: relative;
+}
+
+.panel, .accordion {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.accordion {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    background-color: #dedede;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.accordion:hover, .accordion.active {
+    background-color: #d1d1d1;
+}
+
+.module-header {
+    width: 75%;
+    display: inline-block;
+    padding: 2%;
+}
+
+.module-btn {
+    width: 23%;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.module-btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    color: #000;
+}
+
+.module-btn span {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 12%;
+}
+
+.module-header h3, .module-name {
+    margin-bottom: 1%;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    -webkit-transition: max-height 0.2s ease-out;
+    padding: 0 2%;
+}
+
+@media (min-width: 768px) {
+    .panel, .accordion {
+        width: 60%;
+        margin-left: 5%;
+    }
+}

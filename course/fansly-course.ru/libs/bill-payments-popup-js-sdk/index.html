@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QIWI Checkout popup</title>
+  <style>
+    .container {
+      font-family: 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container button {
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      cursor: pointer;
+      color: #000;
+      background-color: #DDD;
+      padding: 0.5rem 3rem;
+      border-radius: 24px;
+      border: 2px solid #DDD;
+      transition: all 300ms ease 0s;
+      outline: none;
+    }
+
+    .container button:hover,
+    .container button:active,
+    .container button:focus {
+      border: 2px solid rgb(255, 140, 0);
+      background-color: #DDD;
+    }
+  </style>
+  <script src="v1.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>QIWI Checkout popup</h1>
+      <button onclick="QiwiCheckout.createInvoice({
+      publicKey: '2ZnUJD9RnGy4EGGbXzNJjCdhcf4AotpPhB5BgF6Ca3fDBCKkR9a3URLnAGjTCVZnNRp2wnsKpNXtjRyBPQR3Jog9bzZFAG9jKgbcBA8cR2ECtjPoZB',
+      amount: 1,
+      comment: 'Hello from checkout popup',
+      customFields: {
+          themeCode: 'Sergei-B9skNE_dgl',
+          widgetReferrer:  'my.qiwi.com',
+          widgetAlias: 'bryuzgin'
+          }
+      })
+      .then(console.log)
+      .catch(console.error)">
+        Click
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>

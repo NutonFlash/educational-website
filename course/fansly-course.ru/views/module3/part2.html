@@ -1,0 +1,85 @@
+<!--Content-->
+<?php if ($hasAccess) : ?>
+<div class="container content-block">
+    <h3 class="h3-header">Приветственные фразы</h3>
+    <div class="row">
+        <div class="col-lg-5">
+            <ol class="phrases-list">
+                <li style="color: black">
+                    <div class="phrase">
+                        <p>Hi, how are you feeling?</p>
+                        <p>Привет, как твое настроение?</p>
+                    </div>
+                </li>
+                <li style="color: black">
+                    <div class="phrase">
+                        <p>Me too. What are your plans for the coming hours? </p>
+                        <p>У меня тоже. Какие планы на ближайшее часы?</p>
+                    </div>
+                </li>
+                <li style="color: black">
+                    <div class="phrase">
+                        <p>Hi, do you want to spend time with me</p>
+                        <p>Привет, хочешь провести время вместе со мной?</p>
+                    </div>
+                </li>
+                <li style="color: black">
+                    <div class="phrase">
+                        <p>Hi, I missed you</p>
+                        <p>Привет, я соскучилась по тебе</p>
+                    </div>
+                </li>
+                <li id="last-list-item">
+                    <div class="phrase">
+                        <p>Hi, what are you here for today?</p>
+                        <p>Привет, для чего ты здесь сегодня</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5">
+            <ol class="phrases-list" start="6">
+                <li style="color: black">
+                    <div class="phrase">
+                        <p>How is everything?</p>
+                        <p>Как оно?</p>
+                    </div>
+                </li>
+                <li style="color: black">
+                    <div class="phrase">
+                        <p>How are things going?</p>
+                        <p> Как все идет?</p>
+                    </div>
+                </li>
+                <li style="color: black">
+                    <div class="phrase">
+                        <p>How are you getting on?</p>
+                        <p>Как идут дела?</p>
+                    </div>
+                </li>
+                <li style="color: black">
+                    <div class="phrase">
+                        <p>Hi. I hope your day is going great.</p>
+                        <p>Привет. Надеюсь, что у вас хороший день.</p>
+                    </div>
+                </li>
+                <li style="color: black">
+                    <div class="phrase">
+                        <p>I’m glad to connect with you again. </p>
+                        <p>Я рад снова с вами связаться.</p>
+                    </div>
+                </li>
+                <li style="color: black">
+                    <div class="phrase">
+                        <p>I really appreciate you getting back to me.</p>
+                        <p>Я очень ценю, что ты мне написал.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="encurance"></div>
+</div>
+<?php else : include_once('blurContent.html'); ?>
+<?php endif; ?>

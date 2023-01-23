@@ -1,0 +1,110 @@
+/* Welcome page animation */
+
+.header1, .header2, .button-container, .onlyfans {
+    position: relative;
+}
+
+.header1, .button-container {
+    animation: showLeft 1s;
+    -webkit-animation: showLeftIOS 1s;
+}
+
+.header2, .onlyfans {
+    animation: showRight 1s;
+    -webkit-animation: showRightIOS 1s;
+}
+
+@-webkit-keyframes showLeftIOS {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes showLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes showRightIOS {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes showRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.footer, .reviews, .contact {
+    opacity: 0;
+}
+
+.footer.show-element, .reviews.show-element, .contact.show-element {
+    opacity: 1;
+    transition: opacity .75s;
+    -webkit-transition: opacity .75s;
+}
+
+@media (max-width: 4096px) and (min-width: 768px) {
+    .benefits > h2, .benefits > h3, .benefits .row, .operator, .for-who, .conditions,
+    .salary, .program, #button2 {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    .benefits > h2.show-element, .benefits > h3.show-element, .benefits .row.show-element, .operator.show-element,
+    .for-who.show-element, .conditions.show-element, .salary.show-element,
+    .program.show-element, #button2.show-element {
+        opacity: 1;
+        transition: all 1.2s;
+        -webkit-transition: all 1.2s;
+        transform: translateY(0%);
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .benefits > h2, .benefits > h3, .benefits .col-md, .operator, .for-who, .conditions,
+    .salary, .program > h2, .program .col-md, #button2 {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    .benefits > h2.show-element, .benefits > h3.show-element, .benefits .col-md.show-element, .operator.show-element,
+    .for-who.show-element, .conditions.show-element, .salary.show-element,
+    .program > h2.show-element, .program .col-md.show-element, #button2.show-element {
+        opacity: 1;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+        transform: translateY(0%);
+    }
+}
+
+@media (max-width: 575px) {
+    .benefits > h2, .benefits > h3, .benefits .col-md, .operator, .for-who, .conditions > h2, .conditions .col-sm,
+    .salary, .program > h2, .program .col-md, #button2 {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    .benefits > h2.show-element, .benefits > h3.show-element, .benefits .col-md.show-element, .operator.show-element,
+    .for-who.show-element, .conditions > h2.show-element, .conditions .col-sm.show-element, .salary.show-element,
+    .program > h2.show-element, .program .col-md.show-element, #button2.show-element {
+        opacity: 1;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+        transform: translateY(0%);
+    }
+}

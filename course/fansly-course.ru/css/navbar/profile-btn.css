@@ -1,0 +1,166 @@
+#profile-btn-container {
+    width: 40%;
+    margin-left: 3%;
+}
+
+#profile-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    background: rgba(10, 143, 196, 0);
+    border: 1px solid white;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+#profile-btn div {
+    position: relative;
+    float: left;
+    display: inline;
+}
+
+#profile-btn.active, #profile-btn:hover {
+    color: #4a92ff;
+    background-color: white;
+    border: none;
+}
+
+#profile-btn::after {
+    content: none;
+}
+
+#profile-btn-avatar {
+    width: 35%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#profile-btn-p {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: .7rem;
+    font-weight: 600;
+    padding-left: 2.5%;
+    padding-right: 5%;
+}
+
+#profile-btn-container .dropdown {
+    position: relative;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-menu.show {
+    margin-top: 0;
+}
+
+#dropdown-header {
+    color: #212529;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 1rem;
+}
+
+.dropdown-text {
+    color: #212529;
+    padding-left: 1.25rem;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: .85rem;
+    margin: 0;
+}
+
+.dropdown-menu a {
+    font-size: 1rem;
+}
+
+#avatar-svg-path.active {
+    fill: #4a92ff;
+}
+
+/* Mobile phones */
+
+@media (orientation: landscape) and (min-width: 480px) {
+    #profile-btn-container {
+        width: 30%;
+    }
+    #profile-btn {
+        height: 3rem;
+    }
+    #profile-btn-avatar {
+        width: 25%;
+    }
+    #profile-btn-p {
+        font-size: .8rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+    #profile-btn-avatar {
+        width: 15%;
+    }
+}
+
+/* Laptops & tablets*/
+
+@media (orientation: portrait) and (min-width: 768px) {
+    #profile-btn-avatar {
+        width: 17.5%;
+    }
+    #profile-btn-p {
+        font-size: .9rem;
+    }
+}
+
+/* Desktops */
+
+@media (orientation: landscape)  and (min-width: 1024px) and (min-height: 576px) {
+    #profile-btn-container {
+        width: 100%;
+    }
+    #profile-btn {
+        height: 2rem;
+    }
+    #profile-btn-avatar {
+        width: 15%;
+        margin-left: 3%;
+    }
+    #profile-btn-p {
+        font-size: .7rem;
+    }
+}
+
+@media (orientation: landscape)  and (min-width: 1440px) and (min-height: 986px) {
+    #profile-btn {
+        height: 2.75rem;
+    }
+    #profile-btn-avatar {
+        width: 17.5%;
+    }
+    #profile-btn-p {
+        font-size: .8rem;
+    }
+}
+
+@media (orientation: landscape)  and (min-width: 2560px) {
+    #profile-btn {
+        height: 4.5rem;
+        border-radius: 55px;
+        border-width: 3px;
+    }
+    #profile-btn-p {
+        font-size: 1.25rem;
+    }
+}
