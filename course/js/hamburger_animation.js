@@ -12,14 +12,14 @@ export function addHamburgerAnimation() {
     function hamburgerHoverOver() {
         let top = $('.hamb-top');
         let bottom = $('.hamb-bottom');
-        top.css('transform', 'translateY(-.75rem)');
-        bottom.css('transform', 'translateY(.75rem)')
+        top.addClass('transform');
+        bottom.addClass('transform');
     }
 
     function hamburgerHoverOut() {
         let top = $('.hamb-top');
         let bottom = $('.hamb-bottom');
-        top.css('transform', 'translateY(-.5rem)');
-        bottom.css('transform', 'translateY(.5rem)')
+        top.removeClass('transform');
+        bottom.removeClass('transform');
     }
 }

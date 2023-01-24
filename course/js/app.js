@@ -4,15 +4,7 @@ import {adaptNavbar} from "./navbar_adapter.js";
 
 export function initApp() {
 
-    let cookies = document.cookie.split("; ");
-    let isAuth;
-    for (let i = 0; i < cookies.length; i++) {
-        let keyValue = cookies[i].split('=');
-        if (keyValue[0] === 'isAuth') {
-            isAuth = keyValue[1];
-        }
-    }
-    if (isAuth === 'false') {
+    if ($('#loginModalCenter').length !== 0) {
         $('#loginModalCenter').modal('show');
     }
     new Router([
@@ -49,5 +41,5 @@ export function initApp() {
         new Route('module5/part8'),
         new Route('module5/part9')
     ]);
-    window.onresize = adaptNavbar; 
+    window.onresize = adaptNavbar;
 }

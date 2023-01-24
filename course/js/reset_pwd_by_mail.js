@@ -16,6 +16,7 @@ export function setupResetPwdByMailModal() {
                         password_hash: passwordHash
                     })
                 }).done(function (data) {
+                    console.log(data);
                     let json = JSON.parse(data);
                     if (json.responseCode === 0) {
                         $('#resetPwdByMailModalCenter').modal('hide');

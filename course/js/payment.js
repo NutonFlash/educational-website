@@ -3,14 +3,7 @@
     export function setupPaymentBtn() {
 
         $('#payment-modal-btn').bind('click', function () {
-            let cookies = document.cookie.split('; ');
-            let isAuth;
-            for (let i=0; i<cookies.length; i++) {
-                let keyValue = cookies[i].split('=');
-                if (keyValue[0] === 'isAuth')
-                    isAuth = keyValue[1];
-            }
-            if (isAuth !== 'true') {
+            if ($('#loginModalCenter').length !== 0) {
                 invokeErrorAnimation();
             } else {
                 $('#paymentModalCenter').modal('show');
@@ -66,6 +59,7 @@
 
         $('#check-reference-btn').bind('click', function (event) {
             event.preventDefault();
+            console.log(!isReferenceEmpty());
             if (!isReferenceEmpty() && validateReference()) {
                 $.ajax({
                     type: 'POST',
@@ -74,6 +68,7 @@
                         reference_code: $('#reference-code').val()
                     }),
                 }).done(function (data) {
+                    console.log(data);
                     let json = JSON.parse(data);
                     if (json.responseCode === 0) {
                         successReference(json.discount);

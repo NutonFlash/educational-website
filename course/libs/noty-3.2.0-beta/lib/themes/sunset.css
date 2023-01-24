@@ -55,6 +55,7 @@
 }
 
 .noty_theme__sunset.noty_type__success {
+  border-radius: 10px;
   background-color: #06D6A0;
   color: #fff;
 }

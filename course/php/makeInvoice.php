@@ -32,7 +32,6 @@ $payUrl = '';
      * 8 - reference not found
 */
 $data = json_decode(file_get_contents('php://input'), true);
-// var_dump($data);
 if (isset($data['name']) && isset($data['email'])) {
     $reference_code = $data['reference_code'];
     $name = $data['name'];
@@ -46,7 +45,7 @@ if (isset($data['name']) && isset($data['email'])) {
             else
                 $discount = getDiscount($reference_code);
         }
-        
+
         if (!validateNameFormat($name))
             $responseCode = 5;
         if (!validateEmailFormat($email))
@@ -64,7 +63,8 @@ if (isset($data['name']) && isset($data['email'])) {
         $fields = [
             'amount' => $PRICE - $discount,
             'currency' => 'RUB',
-            'expirationDateTime' => $expirationDate,
+            'comment' => '',
+            'expirationDateTime' => '2022-12-17T07:03:00+03:00',
             'email' => $email,
             'account' => $name,
             'customFields' => $customFields
@@ -78,10 +78,9 @@ if (isset($data['name']) && isset($data['email'])) {
                 $payUrl = $response['payUrl'];
                 $dbManager = new DB_Manager();
                 $db = $dbManager->connectDB();
-                $db->insert(['id','email','status','value','creation_date','reference_code','name'])->into('payments')->values($billId,$email,'WAITING',$PRICE-$discount,date('y-m-dTG:i', time()), $reference_code, $name)->execute();
+                $db->insert(['id','email','status','value','creation_date','refer_code','name'])->into('payments')->values($billId,$email,'WAITING',$PRICE-$discount,date('y-m-dTG:i:s', time()), $reference_code, $name)->execute();
             }
         } catch (ErrorException|BillPaymentsException $e) {
-            echo $e->getMessage();
             error_log($e->getMessage());
         }
     }

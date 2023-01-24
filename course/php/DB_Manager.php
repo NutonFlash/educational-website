@@ -2,11 +2,12 @@
 
 use FaaPz\PDO\Database;
 
+
 class DB_Manager
 {
-    private $dsn = 'mysql:host=localhost;dbname=u1870183_course;charset=UTF8';
-    private $usr = 'u1870183_root';
-    private $pwd = 'Sahalox2';
+    private $dsn = 'mysql:host=localhost;dbname=course;charset=UTF8';
+    private $usr = 'root';
+    private $pwd = '';
 
     public function __construct()
     {

@@ -2,12 +2,6 @@ export function setupFooter() {
     // let height = $('.footer').outerHeight(true);
     let height = $('.footer').innerHeight();
     if ($('#paymentModalCenter').length === 0) {
-        $('html, body').each( function() {
-            $(this).css({
-                'height':'',
-                'overflow': ''
-            });
-        });
         $('.encurance').css('height', height);
         $('.footer').css({
             'margin-top': -height,

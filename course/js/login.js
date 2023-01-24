@@ -1,6 +1,7 @@
 import {sha256} from './auth_utilities.js';
 import {bindScripts} from "./bind_scripts.js";
 import {invokeSuccessAnimation} from "./success_animation.js";
+import {isHashOk} from "./XSS_protection";
 
 export function setupLoginModal() {
 
@@ -34,11 +35,15 @@ export function setupLoginModal() {
                                 let path = document.location.hash.replace('#', '');
                                 if (path === '')
                                     path = 'module1';
+                                if (!isHashOk(path)) {
+                                    alert('XSS alert');
+                                    return;
+                                }
                                 $.ajax({
                                     url: 'php/requestHandler.php?' + path,
                                     type: 'GET'
                                 }).done(function (data) {
-                                    document.body.innerHTML = data;
+                                    document.body.innerHTML = DOMPurify.sanitize(data);
                                     bindScripts();
                                 });
                             }

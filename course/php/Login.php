@@ -41,7 +41,7 @@ class Login
     {
         $dbManager = new DB_Manager();
         $db = $dbManager->connectDB();
-        $result = $db->select(['login', 'email'])->from('users')->where(new Grouping('OR',
+        $result = $db->select(['login', 'email', 'id'])->from('users')->where(new Grouping('OR',
             new Grouping('AND', new Conditional('email', '=', $this->email), new Conditional('password', '=', $this->password)),
             new Grouping('AND', new Conditional('login', '=', $this->email), new Conditional('password', '=', $this->password))))->execute();
         if ($result->rowCount() === 0) {
@@ -50,8 +50,10 @@ class Login
             $row = $result->fetch(PDO::FETCH_ASSOC);
             $login = $row['login'];
             $email = $row['email'];
-            setcookie('login', $login, time() + 60 * 60 * 24 * 14, '/');
-            setcookie('email', $email, time() + 60 * 60 * 24 * 14, '/');
+            $id = $row['id'];
+            $db->update(['user_id' => $id])->table('sessions')->where(new Conditional('id', '=', $_COOKIE['id']))->execute();
+            setcookie('login', $login, time() + 60 * 60 * 24 * 14, '/', httponly: true);
+            setcookie('email', $email, time() + 60 * 60 * 24 * 14, '/', httponly: true);
         }
     }
 }

@@ -4,22 +4,15 @@ export function setupReviewModal() {
 
     $('#btn-form-review').bind('click', function (event) {
         event.preventDefault();
-        let login;
-        let cookies = document.cookie.split('; ');
-        for (let i = 0; i < cookies.length; i++) {
-            let keyValue = cookies[i].split('=');
-            if (keyValue[0] === 'login')
-                login = keyValue[1];
-        }
         if (!isReviewEmpty() && validateReview()) {
             $.ajax({
                 type: 'POST',
-                url: 'https://fansly-intro.ru/php/getReview.php',
+                url: 'php/sendReview.php',
                 data: JSON.stringify({
-                    login: login,
                     text: $('#review-text').val()
                 })
             }).done(function (data) {
+                console.log(data);
                 let json = JSON.parse(data);
                 if (json.responseCode === 0) {
                     $('#reviewModalCenter').modal('hide');

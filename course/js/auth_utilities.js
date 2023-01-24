@@ -1,5 +1,6 @@
 import {bindScripts} from "./bind_scripts.js";
 import {invokeSuccessAnimation} from "./success_animation.js";
+import {isHashOk} from "./XSS_protection.js";
 
 /* SHA256 crypto */
 export async function sha256(message) {
@@ -60,11 +61,15 @@ function addDropdownLinkHandlers() {
             let path = document.location.hash.replace('#', '');
             if (path === '')
                 path = 'module1';
+            if (!isHashOk(path)) {
+                alert('XSS alert');
+                return;
+            }
             $.ajax({
                 url: 'php/requestHandler.php?' + path,
                 type: 'GET'
             }).done(function (data) {
-                document.body.innerHTML = data;
+                document.body.innerHTML = DOMPurify.sanitize(data);
                 bindScripts();
             });
         });
@@ -81,7 +86,7 @@ function setupResetPwdModal() {
         if (validateInput()) {
             sha256($('#resetPassword').val()).then(password => {
                 $.ajax({
-                    url: 'php/resetHandler.php',
+                    url: 'https://course/php/resetHandler.php',
                     data: JSON.stringify({password: password}),
                     type: 'POST'
                 }).done(function (data) {

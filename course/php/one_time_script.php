@@ -1,5 +1,20 @@
 <?php
-$message = file_get_contents('../views/utilities/mails/reminder_mail.html');
+
+use FaaPz\PDO\Clause\Conditional;
+
+include_once('DB_Manager.php');
+require_once '../vendor/autoload.php';
+
+$dbManager = new DB_Manager();
+$db = $dbManager->connectDB();
+$result = $db->select(['email'])->from('users')->where(new Conditional('has_access', '=', 0))->execute()->fetchAll(PDO::FETCH_ASSOC);
+
+$emails = '';
+for ($i=0; $i<sizeof($result);$i++) {
+    $emails .= $result[$i]['email'];
+}
+
+$message = file_get_contents('../views/utilities/mails/reminder_mail1.html');
 $subject = 'Еще не забыл?';
 $preferences = ['input-charset' => 'UTF-8', 'output-charset' => 'UTF-8'];
 $encoded_subject = iconv_mime_encode('Subject', $subject, $preferences);
