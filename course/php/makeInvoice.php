@@ -86,7 +86,7 @@ if (isset($data['name']) && isset($data['email'])) {
     }
 } else $responseCode = 3;
 
-echo '{"responseCode":' .  $responseCode . ',"payUrl":"' . $payUrl . '"}';
+echo json_encode(['responseCode'=>$responseCode, 'payUrl'=>$payUrl]);
 
 function validateReferenceFormat($reference_code) {
     return preg_match('#\d{6}#', $reference_code);

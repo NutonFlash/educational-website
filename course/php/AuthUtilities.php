@@ -13,8 +13,6 @@ class AuthUtilities
 
     public static function checkCookie()
     {
-//        header('Access-Control-Allow-Origin', 'https://course');
-//        header('Access-Control-Allow-Credentials', 'true');
         if (!isset($_COOKIE['id'])) {
             setcookie('id', Session::addSession(null, $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT']), time() + 60 * 60 * 24 * 14, '/', httponly: true);
             setcookie('isAuth', 'false', time() + 60 * 60 * 24 * 14, '/', httponly:true);

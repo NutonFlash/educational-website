@@ -32,4 +32,4 @@ if (isset($data['reference_code'])) {
     }
 }
 
-echo '{"responseCode":' . $responseCode . ',"discount":' . $discount . '}';
+echo json_encode(['responseCode'=>$responseCode, 'discount'=>$discount]);
