@@ -10,7 +10,7 @@ $relativePath = '../views/';
 
 $isAuth = $_COOKIE['isAuth'];
 $hasAccess = AuthUtilities::hasAccess();
-$hash = htmlspecialchars($_SERVER['QUERY_STRING'], ENT_QUOTES);
+$hash = str_replace('.', '', htmlspecialchars($_SERVER['QUERY_STRING'], ENT_QUOTES));
 $paths = explode('/', $hash, 2);
 $login = null;
 $email = null;
@@ -50,18 +50,18 @@ if (preg_match('#module1/.+|module3/.+|module5/.+#', $hash)) {
         setcookie('module5', $paths[1], time() + 60 * 60 * 24 * 14, '/');
     }
     echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'utilities/sidebar.html')); // sidebar
-    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $paths[0] . '/' . basename($hash) . '.html')); // content
+    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '.html')); // content
 } else if (preg_match('#module1|module3|module5#', $hash)) {
     echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'utilities/sidebar.html')); // sidebar
     if ($hash === 'module1') {
-        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'module1/' . $module1 . '.html')); // content
+        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '/' . $module1 . '.html')); // content
     } else if ($hash === 'module3'){
-        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'module3/' . $module3 . '.html')); // content
+        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '/' . $module3 . '.html')); // content
     } else {
-        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'module5/' . $module5 . '.html')); // content
+        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '/' . $module5 . '.html')); // content
     }
 } else {
-    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $paths[0] . $paths[1] . '.html')); //content
+    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '.html')); //content
 }
 include_once($relativePath . 'utilities/navbar.html'); // navbar
 include_once($relativePath . 'utilities/modal.html'); // modal
