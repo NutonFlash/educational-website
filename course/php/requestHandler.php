@@ -1,5 +1,8 @@
 <?php
 
+use \Symfony\Component\HtmlSanitizer\HtmlSanitizer;
+use \Symfony\Component\HtmlSanitizer\HtmlSanitizerConfig;
+
 include_once('AuthUtilities.php');
 require_once '../vendor/autoload.php';
 
@@ -23,6 +26,7 @@ $content = null;
 $module1 = htmlspecialchars($_COOKIE['module1'], ENT_QUOTES);
 $module3 = htmlspecialchars($_COOKIE['module3'], ENT_QUOTES);
 $module5 = htmlspecialchars($_COOKIE['module5'], ENT_QUOTES);
+$htmlSanitizer = new HtmlSanitizer(new HtmlSanitizerConfig());
 
 if ($isAuth === 'true') {
     $login = $_COOKIE['login'];
@@ -45,19 +49,19 @@ if (preg_match('#module1/.+|module3/.+|module5/.+#', $hash)) {
         setcookie('module5', $module5, time() - 3600, '/');
         setcookie('module5', $paths[1], time() + 60 * 60 * 24 * 14, '/');
     }
-    include_once($relativePath . 'utilities/sidebar.html'); // sidebar
-    include($relativePath . $hash . '.html'); // content
+    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'utilities/sidebar.html')); // sidebar
+    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '.html')); // content
 } else if (preg_match('#module1|module3|module5#', $hash)) {
-    include_once($relativePath . 'utilities/sidebar.html'); // sidebar
+    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'utilities/sidebar.html')); // sidebar
     if ($hash === 'module1') {
-        include_once($relativePath . $hash . '/' . $module1 . '.html'); // content
+        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '/' . $module1 . '.html')); // content
     } else if ($hash === 'module3'){
-        include_once($relativePath . $hash . '/' . $module3 . '.html'); // content
+        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '/' . $module3 . '.html')); // content
     } else {
-        include_once($relativePath . $hash . '/' . $module5 . '.html'); // content
+        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '/' . $module5 . '.html')); // content
     }
 } else {
-    include_once($relativePath . $hash . '.html'); //content
+    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '.html')); //content
 }
 include_once($relativePath . 'utilities/navbar.html'); // navbar
 include_once($relativePath . 'utilities/modal.html'); // modal
