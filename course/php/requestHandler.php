@@ -49,9 +49,9 @@ if (preg_match('#module1/.+|module3/.+|module5/.+#', $hash)) {
         setcookie('module5', $module5, time() - 3600, '/');
         setcookie('module5', $paths[1], time() + 60 * 60 * 24 * 14, '/');
     }
+    $module_path = $paths[0];
     echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'utilities/sidebar.html')); // sidebar
-    $path = explode('/',$hash);
-    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $path[0] . '/' . $path[1] . '.html')); // content
+    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $module_path . '/' . basename($hash) . '.html')); // content
 } else if (preg_match('#module1|module3|module5#', $hash)) {
     echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'utilities/sidebar.html')); // sidebar
     if ($hash === 'module1') {
