@@ -49,20 +49,19 @@ if (preg_match('#module1/.+|module3/.+|module5/.+#', $hash)) {
         setcookie('module5', $module5, time() - 3600, '/');
         setcookie('module5', $paths[1], time() + 60 * 60 * 24 * 14, '/');
     }
-    $module_path = $paths[0];
     echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'utilities/sidebar.html')); // sidebar
-    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $module_path . '/' . basename($hash) . '.html')); // content
+    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $paths[0] . '/' . basename($hash) . '.html')); // content
 } else if (preg_match('#module1|module3|module5#', $hash)) {
     echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'utilities/sidebar.html')); // sidebar
     if ($hash === 'module1') {
-        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '/' . $module1 . '.html')); // content
+        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'module1/' . $module1 . '.html')); // content
     } else if ($hash === 'module3'){
-        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '/' . $module3 . '.html')); // content
+        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'module3/' . $module3 . '.html')); // content
     } else {
-        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '/' . $module5 . '.html')); // content
+        echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'module5/' . $module5 . '.html')); // content
     }
 } else {
-    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '.html')); //content
+    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $paths[0] . $paths[1] . '.html')); //content
 }
 include_once($relativePath . 'utilities/navbar.html'); // navbar
 include_once($relativePath . 'utilities/modal.html'); // modal
