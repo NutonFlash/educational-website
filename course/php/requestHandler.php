@@ -10,7 +10,7 @@ $relativePath = '../views/';
 
 $isAuth = $_COOKIE['isAuth'];
 $hasAccess = AuthUtilities::hasAccess();
-$hash = htmlspecialchars($_SERVER['QUERY_STRING'], ENT_QUOTES);
+$hash = str_replace('.', '', htmlspecialchars($_SERVER['QUERY_STRING'], ENT_QUOTES));
 $paths = explode('/', $hash, 2);
 $login = null;
 $email = null;
