@@ -10,7 +10,7 @@ $relativePath = '../views/';
 
 $isAuth = $_COOKIE['isAuth'];
 $hasAccess = AuthUtilities::hasAccess();
-$hash = str_replace('.', '', htmlspecialchars($_SERVER['QUERY_STRING'], ENT_QUOTES));
+$hash = htmlspecialchars($_SERVER['QUERY_STRING'], ENT_QUOTES);
 $paths = explode('/', $hash, 2);
 $login = null;
 $email = null;
@@ -50,7 +50,8 @@ if (preg_match('#module1/.+|module3/.+|module5/.+#', $hash)) {
         setcookie('module5', $paths[1], time() + 60 * 60 * 24 * 14, '/');
     }
     echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'utilities/sidebar.html')); // sidebar
-    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $hash . '.html')); // content
+    $path = explode('/',$hash);
+    echo $htmlSanitizer->sanitize(file_get_contents($relativePath . $path[0] . '/' . $path[1] . '.html')); // content
 } else if (preg_match('#module1|module3|module5#', $hash)) {
     echo $htmlSanitizer->sanitize(file_get_contents($relativePath . 'utilities/sidebar.html')); // sidebar
     if ($hash === 'module1') {
