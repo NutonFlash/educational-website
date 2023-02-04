@@ -5,7 +5,7 @@ use FaaPz\PDO\Clause\Conditional;
 include_once ('DB_Manager.php');
 require_once '../vendor/autoload.php';
 
-$PRIVATE_KEY = 'eyJ2ZXJzaW9uIjoiUDJQIiwiZGF0YSI6eyJwYXlpbl9tZXJjaGFudF9zaXRlX3VpZCI6ImFqbzFqOS0wMCIsInVzZXJfaWQiOiI3OTEyMDUxMzE4OCIsInNlY3JldCI6IjNhMDE1MDNhMTU4YWM3NWI4NWY4Y2Y0Zjc5NTE4OTg1OTA3NDVlZTA4ZTk0NTBiYmMwYjNlNDUzMTEzZGI3MjMifX0=';
+$PRIVATE_KEY = 'key';
 
 $signFromServer = getallheaders()['X-Api-Signature-SHA256'];
 $data = json_decode(file_get_contents('php://input'), true);
