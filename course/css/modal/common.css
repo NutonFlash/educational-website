@@ -1,0 +1,110 @@
+.modal-header {
+    justify-content: center;
+}
+
+.modal-header .btn-close {
+    width: 10%;
+    text-align: center;
+}
+
+.modal *, .modal input:-webkit-autofill, #registerModalCenter input:-webkit-autofill {
+    font-family: 'Montserrat', sans-serif;
+    color: #2b2b2b;
+}
+
+h5.modal-title {
+    width: 90%;
+    text-align: center;
+    padding-left: 12%;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.auth-input-block {
+    margin: 2% 17%;
+    text-align: left;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.modal label {
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin-bottom: 0.5%;
+}
+
+#forgotPassword, #createUser, #loginInAccount {
+    font-size: 1.15rem;
+    color: #2b2b2b;
+}
+
+#forgotPassword:hover, #createUser:hover, #loginInAccount:hover {
+    text-decoration: underline 2px #2b2b2b;
+}
+
+.modal-toggle-block {
+    margin: 5% 5% 3%;
+}
+
+.modal-toggle-block * {
+    padding: 1%;
+}
+
+.modal-toggle-block span {
+    font-size: .9rem;
+}
+
+.input-error-msg {
+    font-size: .9rem;
+    text-align: left;
+    margin: 1% 0;
+}
+
+.auth-input-block .form-control.error {
+    border-color: #fc2d2d;
+}
+
+.input-error-msg {
+    color: #fc2d2d;
+}
+
+@font-face {
+    font-family: Verdana;
+    src: url(../../sources/Verdana/Verdana.ttf);
+}
+
+.auth-input-block .form-control[type=password] {
+    font-family: Verdana, serif;
+    letter-spacing: 0.15em;
+}
+
+.auth-input-block .form-control::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    letter-spacing: 0;
+}
+
+.auth-input-block .form-control:focus {
+    box-shadow: 0 0 0 0.15rem rgb(13 110 253 / 25%);
+}
+
+.auth-input-block .form-control.error:focus {
+    box-shadow: 0 0 0 0.15rem rgb(252 45 45 / 25%);
+}
+
+.password-control {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url(../../sources/auth/eye-password-open.svg) 0 0 no-repeat;
+}
+
+.password-control.view {
+    background: url(../../sources/auth/eye-password-hide.svg) 0 0 no-repeat;
+}

@@ -1,0 +1,43 @@
+<!-- Login Modal -->
+<div aria-hidden="true" aria-labelledby="loginModalCenterTitle" class="modal fade" id="loginModalCenter" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalCenterTitle">Войти в систему</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="auth-input-block">
+                        <div class="input-wrapper">
+                            <label for="loginEmail">Логин или e-mail</label>
+                            <input aria-describedby="emailHelp" autocomplete="email" class="form-control"
+                                   id="loginEmail" placeholder="Введите почту или логин">
+                        </div>
+                        <p class="input-error-msg" id="loginEmailError"></p>
+                    </div>
+                    <div class="auth-input-block">
+                        <div class="input-wrapper">
+                            <label for="loginPassword">Пароль</label>
+                            <div style="position: relative">
+                            <a class="password-control" href="#" id="login-pwd-control"></a>
+                            <input autocomplete="current-password" class="form-control" id="loginPassword"
+                                   placeholder="Введите пароль" type="password">
+                            </div>
+                        </div>
+                        <p class="input-error-msg" id="loginPasswordError"></p>
+                        <p class="input-error-msg" id="loginDbError"></p>
+                    </div>
+                    <button class="btn btn-primary" id="btn-form-login" type="submit">Войти</button>
+                </form>
+                <div class="forgot-password-block">
+                    <a href="#" id="forgotPassword">Забыли пароль?</a>
+                </div>
+                <div class="modal-toggle-block">
+                    <span>Новый пользователь?</span>
+                    <a href="#" id="createUser">Создать аккаунт</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

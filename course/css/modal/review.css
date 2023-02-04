@@ -1,0 +1,39 @@
+#btn-form-review {
+    width: 30%;
+    font-size: 1.05rem;
+    color: white;
+    display: block;
+    margin: 5% auto 1%;
+    border-radius: 15px;
+}
+
+#review-tip {
+    font-size: .9rem;
+    margin: 0 10% 2%;
+    text-align: left;
+}
+
+#reviewModalCenter .auth-input-block {
+    margin: 2% 10%;
+}
+
+#reviewModalCenter a {
+    font-size: .9rem;
+    text-decoration: underline;
+}
+
+#reviewModalCenter a:hover {
+    color: #0d6efd;
+}
+
+#reviewModalCenter a:active {
+    color: #9e2fa8;
+}
+
+.counter-text {
+    font-size: .75rem;
+    color: #6c757d;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+}

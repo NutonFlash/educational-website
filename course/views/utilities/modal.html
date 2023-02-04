@@ -1,0 +1,6 @@
+<?php if ($isAuth === 'true') include_once ('modals/resetPwdModal.html'); ?>
+<?php if ($isAuth === 'false') include_once ('modals/loginModal.html'); ?>
+<?php if ($isAuth === 'false') include_once ('modals/registerModal.html'); ?>
+<?php if (!$hasAccess) include_once ('modals/paymentModal.html'); ?>
+<?php if ($isAuth === 'false') include_once ('modals/resetPwdByMailModal.html'); ?>
+<?php if ($hasAccess) include_once ('modals/reviewModal.html'); ?>

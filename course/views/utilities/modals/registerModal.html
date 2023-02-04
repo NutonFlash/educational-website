@@ -1,0 +1,50 @@
+<!-- Register Modal -->
+<div aria-hidden="true" aria-labelledby="registerModalCenterTitle" class="modal fade" id="registerModalCenter"
+     tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalCenterTitle">Новый пользователь</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="auth-input-block">
+                        <div class="input-wrapper">
+                            <label for="registerLogin">Логин</label>
+                            <input aria-describedby="emailHelp" autocomplete="username" class="form-control"
+                                   id="registerLogin" maxlength="20" placeholder="Придумайте логин">
+                        </div>
+                        <p class="input-error-msg" id="registerLoginError"></p>
+                    </div>
+                    <div class="auth-input-block">
+                        <div class="input-wrapper">
+                            <label for="registerEmail">Электронная почта</label>
+                            <input aria-describedby="emailHelp" autocomplete="email" class="form-control"
+                                   id="registerEmail" placeholder="Укажите вашу почту" type="email">
+                        </div>
+                        <p class="input-error-msg" id="registerEmailError"></p>
+                    </div>
+                    <div class="auth-input-block">
+                        <div class="input-wrapper">
+                            <label for="registerPassword">Пароль</label>
+                            <div style="position: relative">
+                            <a class="password-control" href="#" id="register-pwd-control"></a>
+                            <input autocomplete="new-password" class="form-control"
+                                   id="registerPassword"
+                                   placeholder="Придумайте пароль" type="password">
+                            </div>
+                        </div>
+                        <p class="input-error-msg" id="registerPasswordError"></p>
+                        <p class="input-error-msg" id="registerDbError"></p>
+                    </div>
+                    <button class="btn btn-primary" id="btn-form-register" type="submit">Зарегистрироваться</button>
+                </form>
+                <div class="modal-toggle-block">
+                    <span>Уже зарегистрированы?</span>
+                    <a href="#" id="loginInAccount">Войти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

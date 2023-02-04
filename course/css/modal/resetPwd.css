@@ -1,0 +1,13 @@
+#resetModalCenter .auth-input-block {
+    margin: 2% 10%;
+    text-align: left;
+}
+
+#btn-form-resetPwd {
+    width: 8rem;
+    font-size: 1.05rem;
+    color: white;
+    display: block;
+    margin: 7% auto 1%;
+    border-radius: 20px;
+}

@@ -1,0 +1,49 @@
+<!-- Payment Modal -->
+<div aria-hidden="true" aria-labelledby="paymentModalCenterTitle" class="modal fade" id="paymentModalCenter"
+     tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="paymentModalCenterTitle">Оплата курса</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                    <h4 id="payment-h4">Ты уже в одном шаге от покупки!</h4>
+                    <div class="auth-input-block">
+                        <p id="payment-p">После оплаты у тебя навсегда остаётся доступ к пяти модулям курса,
+                            а также появится возможность получить бесплатную консультацию эксперта, открыть для себя множество
+                            площадок для поиска работы и пройти собеседование в агентстве автора данного курса.</p>
+                    </div>
+                <form>
+                    <div class="auth-input-block">
+                        <label for="reference-code">Если у тебя есть промокод, укажи его ниже</label>
+                        <div id="reference-wrapper">
+                        <input class="form-control"
+                               id="reference-code" placeholder="Код купона" type="email">
+                        <button class="btn-primary" id="check-reference-btn">Применить</button>
+                        </div>
+                        <p class="input-error-msg" id="referenceError"></p>
+                    </div>
+                </form>
+                <form>
+                    <div class="auth-input-block">
+                        <label for="name-property">Детали оплаты</label>
+                        <input class="form-control" id="name-property" placeholder="Имя" autocomplete="name">
+                        <p class="input-error-msg" id="namePropertyError"></p>
+                    </div>
+                    <div class="auth-input-block">
+                    <input class="form-control" id="email-property" placeholder="Ваш e-mail" type="email" autocomplete="email">
+                    <p class="input-error-msg" id="emailPropertyError"></p>
+                    <p class="input-error-msg" id="paymentDbError"></p>
+                    </div>
+                    <div class="auth-input-block" id="cost-block">
+                    <h6 class="payment-amount" id="cost">Стоимость курса: <b>5400&#8381;</b></h6>
+                    <h6 class="payment-amount" id="discount">Скидка: <b>0</b></h6>
+                    <h6 class="payment-amount" id="total-cost">Итого: <b>5400&#8381;</b></h6>
+                    </div>
+                    <button class="btn btn-primary" id="buy-course" type="submit">Перейти к оплате заказа</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

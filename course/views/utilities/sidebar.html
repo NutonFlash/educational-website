@@ -1,0 +1,52 @@
+<!-- Sidebar -->
+<div aria-labelledby="offcanvas-label" class="offcanvas offcanvas-start" data-bs-scroll="true" id="sidebar"
+     tabindex="-1">
+    <div class="offcanvas-header">
+        <h2 class="offcanvas-title" id="offcanvas-label">
+            <?php if ($isModule1) : ?>
+            Инструкция и советы к работе на должности "оператор"
+            <?php elseif ($isModule3) : ?>
+            Полезные скрипты для "оператора"
+            <?php elseif ($isModule5) : ?>
+            Способы продажи данного курса
+            <?php endif; ?>
+        </h2>
+        <button class="btn-close text-reset" data-bs-dismiss="offcanvas" type="button"></button>
+    </div>
+    <div class="offcanvas-body">
+        <h2>Содержание</h2>
+        <div class="content-list">
+            <?php if ($isModule1) : ?>
+            <a class="sidebar-link" href="#module1/part1">1. Суть работы оператором, кратко</a>
+            <a class="sidebar-link" href="#module1/part2">2. Базовые советы по работе</a>
+            <a class="sidebar-link" href="#module1/part3">3. Как делать рассылку?</a>
+            <a class="sidebar-link" href="#module1/part4">4. Как выставлять цену на контент?</a>
+            <a class="sidebar-link" href="#module1/part5">5. Не забываем про публикации!</a>
+            <a class="sidebar-link" href="#module1/part6">6. Как выглядит смена?</a>
+            <a class="sidebar-link" href="#module1/part7">7. Пример удачного диалога</a>
+            <?php elseif ($isModule3) : ?>
+            <a class="sidebar-link" href="#module3/part1">1. Дисклеймер</a>
+            <a class="sidebar-link" href="#module3/part2">2. Приветствие</a>
+            <a class="sidebar-link" href="#module3/part3">3. Выявление потребности</a>
+            <a class="sidebar-link" href="#module3/part4">4. Прогрев</a>
+            <a class="sidebar-link" href="#module3/part5">5. Оценка финансовой способности</a>
+            <a class="sidebar-link" href="#module3/part6">6. Переход к продаже</a>
+            <a class="sidebar-link" href="#module3/part7">7. Описание контента</a>
+            <a class="sidebar-link" href="#module3/part8">8. Идеи для секстинга и ролевых игр</a>
+            <a class="sidebar-link" href="#module3/part9">9. "Что делаешь?"</a>
+            <a class="sidebar-link" href="#module3/part10">10. "Как ты? Как настроение?"</a>
+            <a class="sidebar-link" href="#module3/part11">11. "У меня сейчас нет денег заплатить"</a>
+            <?php elseif ($isModule5) : ?>
+            <a class="sidebar-link" href="#module5/part1">1. Сюрприз!</a>
+            <a class="sidebar-link" href="#module5/part2">2. Продажа курса своим знакомым</a>
+            <a class="sidebar-link" href="#module5/part3">3. Поиск продавцов среди своих знакомых</a>
+            <a class="sidebar-link" href="#module5/part4">4. Поиск продавцов в чатах</a>
+            <a class="sidebar-link" href="#module5/part5">5. Предложение сотрудничества блогерам</a>
+            <a class="sidebar-link" href="#module5/part6">6. Покупка рекламы</a>
+            <a class="sidebar-link" href="#module5/part7">7. Придумай сам!</a>
+            <a class="sidebar-link" href="#module5/part8">8. Ссылка</a>
+            <a class="sidebar-link" href="#module5/part9">9. Заключение</a>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>

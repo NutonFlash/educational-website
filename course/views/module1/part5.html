@@ -1,0 +1,32 @@
+<!--Content-->
+<?php if ($hasAccess) : ?>
+<div class="container content-block">
+    <h3 class="h3-header">Не забываем про публикации!</h3>
+    <p class="default-text">Делать нужно по одной публикации в день (по-разному, сегодня ты сделал публикацию для платных подписчиков, а завтра – просто платную публикацию – добавил цену). Некоторые агентства не требуют постоянно делать публикации, уточняйте этот момент!</p>
+    <p class="default-text">Публикация делается так (в компьютерной версии):</p>
+    <ol class="content-ol">
+        <li>
+            <p class="default-text">Нажимаем на значок "Fansly"</p>
+            <img class="content-img" alt="значок Fansly" src="../../sources/module1/publication/first_step.png">
+        </li>
+        <li>
+            <p class="default-text">Затем нажимаем на указанную стрелочкой кнопочку</p>
+            <img class="content-img" alt="иконка картинки" src="../../sources/module1/publication/second_step.png">
+        </li>
+        <li>
+            <p class="default-text">Добавляем “permission” – ставим либо “add price” (то есть за указанную вами цену любой желающий может приобрести фото), либо “subscribed”. Subscribers -это платные подписчики. Публикация может быть сделана либо для тех, кто приобрел любой из видов платной подписки, либо для владельцев конкретного вида платной подписки. На фото указано “All tires”, это значит, что публикация будет доступна владельцам любой категории платной подписки.</p>
+            <img class="content-img" alt="окно загрузки контента" src="../../sources/module1/publication/third_step.png">
+        </li>
+    </ol>
+    <p class="default-text">Добавляйте к публикации превью (бесплатный предварительный просмотр) и подпись. По ним должно быть
+            понятно, что находится на закрытой фотографии.</p>
+    <p class="default-text">С телефона публикация делается по-другому, нужно просто нажать на плюсик:</p>
+    <ol class="content-ol">
+        <li>
+            <img class="content-img" alt="значок Fansly" src="../../sources/module1/publication/for_mobile.png" style="height: 25rem; width: auto">
+        </li>
+    </ol>
+    <div class="encurance"></div>
+</div>
+<?php else : include_once('blurContent.html') ?>
+<?php endif; ?>

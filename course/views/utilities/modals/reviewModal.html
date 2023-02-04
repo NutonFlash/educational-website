@@ -1,0 +1,33 @@
+<!-- Review Modal -->
+<div aria-hidden="true" aria-labelledby="reviewModalCenterTitle" class="modal fade" id="reviewModalCenter"
+     tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reviewModalCenterTitle">Оставить отзыв</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <p id="review-tip">Мы ценим фидбэк каждого клиента, поэтому здесь ты можешь оставить свой отзыв,
+                        который будет отображаться на нашей <a href="https://fansly-intro.ru" target="_blank">лэндиговой
+                            странице</a> к курсу.</p>
+                    <div class="auth-input-block">
+                        <div class="input-wrapper">
+                            <label for="review-text">Отзыв</label>
+                            <textarea class="form-control" id="review-text"
+                                      maxlength="150" placeholder="Ваш отзыв..." rows="5"></textarea>
+                            <span class="counter-text">
+                            <span id="counter-text">0</span>
+                            /
+                            <span>150</span>
+                            </span>
+                        </div>
+                        <p class="input-error-msg" id="reviewTextError"></p>
+                    </div>
+                    <button class="btn btn-primary" id="btn-form-review" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

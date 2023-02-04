@@ -1,0 +1,74 @@
+#paymentModalCenter .auth-input-block {
+    margin: 2% 10%;
+    text-align: left;
+}
+
+#payment-h4 {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#buy-course {
+    width: 17.5rem;
+    font-size: 1.05rem;
+    color: white;
+    display: block;
+    margin: 7% auto 1%;
+    border-radius: 20px;
+}
+
+#reference-code {
+    display: inline-block;
+    width: 60%;
+}
+
+#check-reference-btn {
+    width: 36%;
+    font-size: .95rem;
+    color: white;
+    display: inline-block;
+    padding: 2% 0;
+    margin-left: 2%;
+    border-radius: 10px;
+}
+
+/* Laptops & tablets*/
+
+@media (orientation: portrait) and (min-width: 768px) {
+    #payment-h4 {
+        padding: 0 10%;
+        text-align: left;
+    }
+    #check-reference-btn {
+        font-size: 1.05rem;
+        border-radius: 15px;
+    }
+}
+
+/* Desktops */
+
+@media (orientation: landscape)  and (min-width: 1024px) and (min-height: 576px) {
+    #payment-h4 {
+        padding: 0 10%;
+        text-align: left;
+    }
+    #check-reference-btn {
+        width: 30%;
+        font-size: 1.25rem;
+        border-radius: 30px;
+    }
+    #buy-course {
+        width: 20rem;
+        font-size: 1.25rem;
+        border-radius: 30px;
+    }
+}
+
+@media (orientation: landscape)  and (min-width: 1440px) and (min-height: 986px) {
+    #check-reference-btn {
+        width: 36%;
+    }
+}

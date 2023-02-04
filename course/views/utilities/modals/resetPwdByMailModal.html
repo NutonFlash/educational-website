@@ -1,0 +1,24 @@
+<!-- Reset Password By Mail Modal -->
+<div aria-hidden="true" aria-labelledby="resetPwdByMailModalCenterTitle" class="modal fade" id="resetPwdByMailModalCenter" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resetPwdByMailModalCenterTitle">Сбросить пароль</h5>
+        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <p id="resetPwdByMailText">Если ты забыл свой пароль, укажи в поле снизу логин или e-mail,
+            и мы автоматически отправим новый пароль на привязанную к твоему аккаунту почту.</p>
+          <div class="auth-input-block">
+              <label for="loginOrEmailForReset">Логин или e-mail</label>
+              <input class="form-control" id="loginOrEmailForReset"
+                     placeholder="Введите почту или логин">
+            <p class="input-error-msg" id="resetPwdByMailError"></p>
+          </div>
+          <button class="btn btn-primary" id="btn-form-resetPwdByMail" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

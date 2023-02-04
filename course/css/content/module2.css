@@ -1,0 +1,9 @@
+#module2-list {
+    margin: 0 0 2% 7%;
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    #module2-list {
+        margin: 0 0 2% 3%;
+    }
+}

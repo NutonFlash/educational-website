@@ -1,0 +1,24 @@
+<!--Content-->
+<?php if ($hasAccess) : ?>
+<div class="container content-block">
+    <h3 class="h3-header">Как выглядит смена?</h3>
+    <ol class="content-ol">
+        <li><p class="default-text">Ответить на непрочитанные сообщения и добавить диалоги их в актуальный список.</p></li>
+        <li><p class="default-text">Добавить в актуальный список диалоги, которые были активны в предыдущие 1.5 часа.</p></li>
+        <li><p class="default-text">Сделать рассылку.</p></li>
+        <li><p class="default-text">Посмотреть истории и свежие посты модели.</p></li>
+        <li><p class="default-text">Повторить те же действия на каждом аккаунте и странице модели.</p></li>
+        <li><p class="default-text">Активно отвечать на сообщения (время ответа не более 30 минут).</p></li>
+        <li><p class="default-text">Возобновлять неактивные диалоги.</p></li>
+        <li><p class="default-text">Проверять уведомления о покупках.</p></li>
+    </ol>
+    <h3 class="h3-header">Как заканчивать смену?</h3>
+    <ol class="content-ol">
+        <li><p class="default-text">Удалить рассылку.</p></li>
+        <li><p class="default-text">Удалить актуальные списки.</p></li>
+        <li><p class="default-text">Выслать отчёт (агентства сами показывают пример отчета).</p></li>
+    </ol>
+    <div class="encurance"></div>
+</div>
+<?php else : include_once('blurContent.html') ?>
+<?php endif; ?>
