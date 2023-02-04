@@ -8,7 +8,7 @@ require_once '../vendor/autoload.php';
 
 date_default_timezone_set('Europe/Moscow');
 
-$PRIVATE_KEY = 'eyJ2ZXJzaW9uIjoiUDJQIiwiZGF0YSI6eyJwYXlpbl9tZXJjaGFudF9zaXRlX3VpZCI6ImFqbzFqOS0wMCIsInVzZXJfaWQiOiI3OTEyMDUxMzE4OCIsInNlY3JldCI6IjNhMDE1MDNhMTU4YWM3NWI4NWY4Y2Y0Zjc5NTE4OTg1OTA3NDVlZTA4ZTk0NTBiYmMwYjNlNDUzMTEzZGI3MjMifX0=';
+$PRIVATE_KEY = 'key';
 $THEME_CODE = 'Aleksandr-MvZ9vZCxXe';
 try {
     $crypto = random_bytes(32);
