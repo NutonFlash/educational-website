@@ -3,10 +3,6 @@
 include_once ('php/DB_Manager.php');
 require_once 'vendor/autoload.php';
 
-function custom_sort($a,$b){
-    return strlen($b)-strlen($a);
-}
-
 $rows = null;
 try {
     $dbManager = new DB_Manager();
