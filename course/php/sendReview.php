@@ -20,8 +20,8 @@ if (isset($_COOKIE['login']) && isset($data['text']) && !empty($_COOKIE['login']
         try {
             $dbManager = new DB_Manager();
             $dbManager->setDsn('mysql:host=fansly-intro.ru;dbname=u1876096_intro;charset=UTF8');
-            $dbManager->setUsr('u1876096_root');
-            $dbManager->setPwd('NutonFlash2002108$');
+            $dbManager->setUsr('username');
+            $dbManager->setPwd('password');
             $db = $dbManager->connectDB();
             $db->insert(['login', 'text'])->into('reviews')->values($login, $text)->execute();
             $responseCode = 0;
