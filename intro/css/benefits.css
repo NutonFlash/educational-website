@@ -1,0 +1,58 @@
+.benefits .row {
+    margin-top: 15px;
+}
+
+.benefits > h3 {
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.benefits .col-md {
+    margin-top: 15px;
+}
+
+.benefit-item img {
+    width: 20%;
+    height: 20%;
+}
+
+.benefit-item h3 {
+    font-weight: 500;
+    margin-top: 3%;
+}
+
+#time-benefit-text {
+    margin-bottom: 1%;
+}
+
+#time-benefit-note {
+    font-size: .8rem;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .benefits > h3 {
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .benefits .col-md {
+        margin-top: 25px;
+    }
+
+    .benefit-item img {
+        width: 25%;
+        height: 25%;
+    }
+
+    .benefit-item h3 {
+        font-weight: 500;
+        margin-top: 3%;
+    }
+
+    #time-benefit-note {
+        font-size: .7rem;
+    }
+}

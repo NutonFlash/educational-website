@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="256"
+     height="256" viewBox="0 0 256 256" xml:space="preserve">
+ <g>
+  <title>3</title>
+     <ellipse stroke-width="8" ry="124" rx="124" cy="128" cx="128" stroke="rgb(5, 224, 240)" fill="#fff"/>
+     <text alignment-baseline="central" text-anchor="middle" x="128" y="128" fill="rgb(5, 224, 240)"
+           font-family="Montserrat, sans-serif" font-size="140">3</text>
+ </g>
+</svg>

@@ -1,0 +1,43 @@
+# Редирект с http на https
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.fansly-intro.ru
+RewriteRule (.*) http://fansly-intro.ru/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ http://fansly-intro.ru/ [R=301,L]
+# теперь при доступе к http://www.site.ru/home
+# будет открываться http://www.site.ru/home.php
+# [L] скрывает реальный адрес от посетителя
+RewriteRule ^(.*)\$ $1.php [L]
+# Выключаем вывод ошибок 
+php_flag display_errors off
+php_value error_reporting 0
+# Защита от Hotlink
+RewriteCond %{HTTP_REFERER} !^$
+#Далее список разрешенных сайтов
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www.)?fansly-intro.ru.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www.)?fansly-course.ru.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www.)?yandex.ru [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www.)?google. [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www.)?msn. [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www.)?yahoo. [NC]
+RewriteCond %{HTTP_REFERER} !search?q=cache [NC]
+#Список запрещенных для хотлинка форматов
+RewriteRule \.(jpe?g|bmp|gif|png|css|zip|pdf|txt|doc)$ - [NC,F,L]
+AddDefaultCharset UTF-8
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+Header set Cache-Control "public"
+Header set Expires "Fri, 21 Dec 2025 20:00:00 GMT"
+FileETag None
+</FilesMatch>
+<IfModule mod_headers.c>
+    # Header set Access-Control-Allow-Origin "https://fansly-course.ru"
+</IfModule>
