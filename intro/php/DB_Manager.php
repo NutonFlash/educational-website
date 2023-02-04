@@ -5,8 +5,8 @@ use FaaPz\PDO\Database;
 class DB_Manager
 {
     private $dsn = 'mysql:host=localhost;dbname=u1876096_intro;charset=UTF8';
-    private $usr = 'u1876096_root';
-    private $pwd = 'NutonFlash2002108$';
+    private $usr = 'username';
+    private $pwd = 'password';
 
     public function __construct()
     {
