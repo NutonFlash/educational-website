@@ -13,7 +13,8 @@ Terms of Reference for the main project page:
 3) saving user sessions and cookies for more convenient interaction with the site
 4) 5 modules of educational content, each of which has convenient navigation through the lessons
 5) email newsletters to attract users after registration
-6) adaptive design
+6) referral system for sellers to use their discount promo codes
+7) adaptive design
 
 The landing page is written using HTML, CSS, JS. The main page of the course is implemented as a Single Page Application. The content is loaded via AJAX requests. The backend was built using PHP and MySQL database, payments integration with the QIWI API.
 
