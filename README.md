@@ -16,3 +16,5 @@ Terms of Reference for the main project page:
 6) adaptive design
 
 The landing page is written using HTML, CSS, JS. The main page of the course is implemented as a Single Page Application. The content is loaded via AJAX requests. The backend was built using PHP and MySQL database, payments integration with the QIWI API.
+
+###Tap on the links to see [landing](https://fansly-intro.ru/) and [main project](https://fansly-course.ru/) pages
