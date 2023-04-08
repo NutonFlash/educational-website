@@ -2,7 +2,7 @@
   "dependencies": {
     "bootstrap": "^5.2.3",
     "dompurify": "^2.4.3",
-    "jquery": "^3.6.2",
+    "jquery": "^3.6.4",
     "sweetalert2": "^11.4.8",
     "watchify": "^4.0.0"
   }
